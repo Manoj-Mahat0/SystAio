@@ -13,8 +13,7 @@
         
         <h2>📌 Setup & Run Instructions</h2>
         <h3>🔹 1️⃣ Clone the Repository</h3>
-        <pre><code>git clone https://github.com/your-username/your-repo.git
-cd your-repo</code></pre>
+        
         
         <h3>🛠 Backend Setup (FastAPI)</h3>
         <h4>🔹 2️⃣ Install Dependencies</h4>
@@ -22,7 +21,7 @@ cd your-repo</code></pre>
 pip install -r requirements.txt</code></pre>
         
         <h4>🔹 3️⃣ Set Up Environment Variables</h4>
-        <pre><code>DATABASE_URL = mysql+pymysql://username:password@host/db_name
+        <pre><code>DATABASE_URL = 
 SECRET_KEY = your_secret_key
 ALGORITHM = HS256</code></pre>
         
@@ -78,4 +77,4 @@ Content-Type: application/json
         </ul>
         
         <h2>✨ Contributors</h2>
-        <p>Your Name</p>
+        <p>Manoj Mahato</p>
