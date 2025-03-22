@@ -1,178 +1,81 @@
-🛍 E-Commerce Platform (FastAPI + React)
-
-A full-stack e-commerce application built with FastAPI (backend) and React (frontend).
-
-🚀 Features
-
-✅ User Authentication (Signup & Login)✅ Product Management (Add, Update, Delete, View)✅ Order Management (Place Order, Admin Approval)✅ Secure API with JWT Authentication✅ Fully Responsive UI with Tailwind CSS✅ Deployed on Render & Vercel
-
-📂 Folder Structure
-
-📦 project_root/  
-┣ 📂 backend/                # FastAPI Backend  
-┃ ┣ 📂 DB/                   # Database Models & Connection  
-┃ ┣ 📂 routes/               # API Routes (user, product, order, etc.)  
-┃ ┣ 📂 frontend/             # React Build (After `npm run build`)  
-┃ ┣ 📜 main.py               # FastAPI Entry Point  
-┃ ┣ 📜 auth.py               # Authentication Logic  
-┃ ┣ 📜 config.py             # Environment Variables  
-┃ ┣ 📜 schemas.py            # Pydantic Schemas  
-┃ ┣ 📜 requirements.txt      # Backend Dependencies  
-┃ ┗ 📜 .env                  # Environment Variables (not pushed)  
-┃  
-┣ 📂 frontend/               # React Frontend  
-┃ ┣ 📂 src/                  # React Components & Pages  
-┃ ┣ 📜 api.js                # API Calls (Axios)  
-┃ ┣ 📜 config.js             # API Base URL  
-┃ ┣ 📜 App.js                # Main React Component  
-┃ ┣ 📜 package.json          # React Dependencies  
-┃ ┗ 📜 README.md             # Frontend Documentation  
-
-📌 Setup & Run Instructions
-
-🔹 1️⃣ Clone the Repository
-
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-
-🛠 Backend Setup (FastAPI)
-
-🔹 2️⃣ Install Dependencies
-
-cd backend
-pip install -r requirements.txt
-
-🔹 3️⃣ Set Up Environment Variables
-
-Create a .env file inside the backend/ folder and add:
-
-DATABASE_URL = mysql+pymysql://freedb_manoj:ZscbxA%8!BK!7qV@sql.freedb.tech:3306/freedb_ecom_db
-SECRET_KEY = manoj
-ALGORITHM = HS256
-
-🔹 4️⃣ Run FastAPI Backend
-
-uvicorn main:app --host 0.0.0.0 --port 8000
-
-✅ Backend should now be running at http://localhost:8000✅ API Documentation: http://localhost:8000/docs
-
-🎨 Frontend Setup (React)
-
-🔹 5️⃣ Install Frontend Dependencies
-
-cd frontend
-npm install
-
-🔹 6️⃣ Set Up API URL
-
-Edit frontend/src/config.js:
-
-export const API_URL = "http://localhost:8000/api";
-
-🔹 7️⃣ Start React Frontend
-
-npm start
-
-✅ Frontend should now be running at http://localhost:3000
-
-👤 User Authentication Process
-
-🔹 8️⃣ Create an Account (Signup)
-
-Before logging in, the user must create an account via the backend.
-
-Use Postman or cURL to make a POST request:
-
-POST http://localhost:8000/api/signup
+<h1>🛍 E-Commerce Platform (FastAPI + React)</h1>
+        <p>A full-stack e-commerce application built with FastAPI (backend) and React (frontend).</p>
+        
+        <h2>🚀 Features</h2>
+        <ul>
+            <li>✅ User Authentication (Signup & Login)</li>
+            <li>✅ Product Management (Add, Update, Delete, View)</li>
+            <li>✅ Order Management (Place Order, Admin Approval)</li>
+            <li>✅ Secure API with JWT Authentication</li>
+            <li>✅ Fully Responsive UI with Tailwind CSS</li>
+            <li>✅ Deployed on Render & Vercel</li>
+        </ul>
+        
+        <h2>📌 Setup & Run Instructions</h2>
+        <h3>🔹 1️⃣ Clone the Repository</h3>
+        <pre><code>git clone https://github.com/your-username/your-repo.git
+cd your-repo</code></pre>
+        
+        <h3>🛠 Backend Setup (FastAPI)</h3>
+        <h4>🔹 2️⃣ Install Dependencies</h4>
+        <pre><code>cd backend
+pip install -r requirements.txt</code></pre>
+        
+        <h4>🔹 3️⃣ Set Up Environment Variables</h4>
+        <pre><code>DATABASE_URL = mysql+pymysql://username:password@host/db_name
+SECRET_KEY = your_secret_key
+ALGORITHM = HS256</code></pre>
+        
+        <h4>🔹 4️⃣ Run FastAPI Backend</h4>
+        <pre><code>uvicorn main:app --host 0.0.0.0 --port 8000</code></pre>
+        <p>✅ Backend should now be running at <a href="http://localhost:8000">http://localhost:8000</a></p>
+        
+        <h3>🎨 Frontend Setup (React)</h3>
+        <h4>🔹 5️⃣ Install Frontend Dependencies</h4>
+        <pre><code>cd frontend
+npm install</code></pre>
+        
+        <h4>🔹 6️⃣ Set Up API URL</h4>
+        <pre><code>export const API_URL = "http://localhost:8000/api";</code></pre>
+        
+        <h4>🔹 7️⃣ Start React Frontend</h4>
+        <pre><code>npm start</code></pre>
+        <p>✅ Frontend should now be running at <a href="http://localhost:3000">http://localhost:3000</a></p>
+        
+        <h2>👤 User Authentication Process</h2>
+        <h3>🔹 8️⃣ Create an Account (Signup)</h3>
+        <pre><code>POST http://localhost:8000/api/signup
 Content-Type: application/json
-
-Request Body:
 
 {
   "email": "user@example.com",
   "password": "password123"
-}
-
-✅ If successful, the user is registered.
-
-🔹 9️⃣ Login in Frontend
-
-Open the React App (http://localhost:3000).
-
-Use the following sample login credentials:
-
-{
+}</code></pre>
+        
+        <h3>🔹 9️⃣ Login in Frontend</h3>
+        <pre><code>{
   "email": "user@example.com",
   "password": "string"
-}
-
-Click Login → You will be redirected to the Admin Panel or Dashboard.
-
-🌍 Live Demo Links
-
-Backend (FastAPI - Render): https://your-backend.onrender.com
-
-Frontend (React - Vercel): https://your-frontend.vercel.app
-
-API Documentation: https://your-backend.onrender.com/docs
-
-📜 API Endpoints
-
-Method
-
-Endpoint
-
-Description
-
-POST
-
-/api/signup
-
-Register a new user
-
-POST
-
-/api/login
-
-Login with email & password
-
-GET
-
-/api/products
-
-Fetch all products
-
-POST
-
-/api/order/place
-
-Place an order
-
-PUT
-
-/api/order/accept
-
-Admin accepts order
-
-GET
-
-/api/orders
-
-View all orders
-
-🛠 Tech Stack
-
-Backend: FastAPI, SQLAlchemy, JWT Auth
-
-Frontend: React, Axios, Tailwind CSS
-
-Database: MySQL (Hosted on FreeDB)
-
-Deployment: Render (Backend) & Vercel (Frontend)
-
-✨ Contributors
-
-Your Name
-
-🚀 Now your project is ready for submission! 🎯
-
+}</code></pre>
+        
+        <h2>📜 API Endpoints</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr><th>Method</th><th>Endpoint</th><th>Description</th></tr>
+            <tr><td>POST</td><td>/api/signup</td><td>Register a new user</td></tr>
+            <tr><td>POST</td><td>/api/login</td><td>Login with email & password</td></tr>
+            <tr><td>GET</td><td>/api/products</td><td>Fetch all products</td></tr>
+            <tr><td>POST</td><td>/api/order/place</td><td>Place an order</td></tr>
+            <tr><td>PUT</td><td>/api/order/accept</td><td>Admin accepts order</td></tr>
+            <tr><td>GET</td><td>/api/orders</td><td>View all orders</td></tr>
+        </table>
+        
+        <h2>🛠 Tech Stack</h2>
+        <ul>
+            <li>Backend: FastAPI, SQLAlchemy, JWT Auth</li>
+            <li>Frontend: React, Axios, Tailwind CSS</li>
+            <li>Database: MySQL (Hosted on FreeDB)</li>
+            <li>Deployment: Render (Backend) & Vercel (Frontend)</li>
+        </ul>
+        
+        <h2>✨ Contributors</h2>
+        <p>Your Name</p>
